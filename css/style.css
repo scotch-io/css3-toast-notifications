@@ -15,14 +15,18 @@ ul 								{ margin-bottom:100px; }
 
 	/* toast */
 	.toast 						{ background:#F69D44; color:#FFF; display:block; margin:0 auto; width:300px;
-		border-radius:60px; -webkit-animation:fadeIn 1s;
+		border-radius:60px; -webkit-animation:fadeInDown 1s;
 	}
 
+		/* icon */
 		.toast-icon 			{ background:#ffc36a; display:block; float:left; font-size:25px; height:50px; margin-right:15px; padding:9px 0 0 12px; width:50px;
 			border-radius:50%;
 		}
 			.toast-icon i 		{ -webkit-animation:flip 1.2s; }
 
+		.moveToMiddle 			{ color:#FF0000; -webkit-animation:moveToMiddle 1.2s; }
+
+		/* information */
 		.toast-info 			{ font-family:'Arvo'; padding-top:14px;
 			-webkit-animation:fadeInDown 0.8s;
 		}
@@ -43,6 +47,11 @@ ul 								{ margin-bottom:100px; }
 	}
 
 	@-webkit-keyframes flip 		{
-	0% 								{ -webkit-transform: rotateY(0); -webkit-animation-timing-function: ease-out; }
-	100% 							{ -webkit-transform: rotateY(180deg); -webkit-animation-timing-function: ease-in; }
-}
+		0% 							{ -webkit-transform: rotateY(0); -webkit-animation-timing-function: ease-out; }
+		100% 						{ -webkit-transform: rotateY(180deg); -webkit-animation-timing-function: ease-in; }
+	}
+
+	@-webkit-keyframes moveToMiddle {
+		0% 							{ -webkit-transform:rotateY(0) translateX(0); }
+		100% 						{ -webkit-transform:rotateY(180deg) translateX(-300px); }
+	}
